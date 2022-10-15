@@ -10,6 +10,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with Bun.
 bun create next ./app
 ```
 
+or
+
+```sh
+bun create next YourProjectName
+```
+
 First, run the development server:
 
 ```bash
