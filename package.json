@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "bunx next dev",
-    "build": "bunx next build",
+    "build-next": "bunx next build",
     "start": "bunx next start",
     "lint": "bunx next lint",
     "db:generate": "drizzle-kit generate:pg",
