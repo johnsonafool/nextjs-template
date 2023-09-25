@@ -21,13 +21,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup bun
-        uses: oven-sh/setup-bun@v1
-
       - name: Setup Node 20
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: grep -Eo '\d+\.\d+\.\d+' .tool-versions | tail -n 1 
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          version: grep -Eo '\d+\.\d+\.\d+' .tool-versions | head -n 1 
 
       - name: Install deps
         run: bun install
